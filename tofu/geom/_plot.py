@@ -1462,8 +1462,11 @@ def _Cam12D_plottouch(cam, key=None, ind=None, quant='lengths', nchMax=_nchMax,
             cols = cam.get_touch_colors(dElt=dElt)
         else:
             cols = np.tile(mpl.colors.to_rgba(cmap), (self.nRays,1)).T
-        cols[-1,:] = 1.-norm(data)
-        cols = np.swapaxes(cols[:,indr.T], 0,2)
+        import pdb; pdb.set_trace()     # DB
+        cols[-1, :] = 1.-norm(data)
+        cols = np.swapaxes(cols[:, indr.T], 0, 2)
+
+    import pdb; pdb.set_trace()     # DB
 
     #########
     # Plot
